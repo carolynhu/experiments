@@ -1,0 +1,22 @@
+1. View the last 10 lines of a file
+`tail /usr/share/dict/words`
+
+2. Pass `-n` option to limit the number of lines to show
+`tail -n 1 /usr/share/dict/words`
+
+3. Pass `-c` option to limit the number of bytes to show
+`tail -c 24 /usr/share/dict/words`
+
+4. Pass multiple files to show last 10 lines of multiple files
+`tail /usr/share/dict/words /usr/share/dict/french`
+
+To suppress the header line pass the `-q` option.
+`tail -q /usr/share/dict/words /usr/share/dict/french`
+
+5. Watch a file for changes `-f`
+like checking log files in real-time
+`tail -f /var/log/nginx/access.log`
+`tail -f /var/log/nginx/access.log /var/log/nginx/access.log`
+
+6. tail with pipes
+`ls -t /etc | tail -n 5`
