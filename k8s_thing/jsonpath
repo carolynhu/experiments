@@ -1,0 +1,14 @@
+Check pod status:
+jsonpath: https://kubernetes.io/docs/reference/kubectl/jsonpath/
+Pod Phase: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase
+
+```
+kubectl get pods -o=jsonpath="{.items[*].status.phase}" -n istio-system
+Running Running Running Running Running Running Running Running Running Running Running Running
+```
+
+# istio release 1.4.4
+```
+kubectl get pods -o=jsonpath="{.items[*].metadata.name}" -n istio-system
+grafana-5f798469fd-sbkmj istio-citadel-5548f645bf-pjtlv istio-egressgateway-b8d57d8bd-bmc9c istio-galley-69c889d447-lrks8 istio-ingressgateway-76b6b559d4-g6z6x istio-pilot-54c68b87f8-9jstv istio-policy-7d4c766898-xnc7d istio-sidecar-injector-c69d4c5ff-2gc6f istio-telemetry-fd6b46d5b-tztkt istio-tracing-cd67ddf8-xhn5g kiali-7964898d8c-bmmzw prometheus-586d4445c7-frlxv
+```
