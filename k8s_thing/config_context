@@ -1,0 +1,8 @@
+https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config
+
+kubectl config current-context
+kubectl config get-contexts
+kubectl config delete-context NAME (can only delete one context at a time, no regex match either)
+
+
+
